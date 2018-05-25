@@ -129,11 +129,11 @@ int main(int argc, char **argv) //main loop
 	int splashTimer = 0; //splash screen timer
 	int mainMenuIndex = 0; //main menu image index
 	
-    //Setup window
-    SDL_Window* window = SDL_CreateWindow(nullptr, SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 0, 0, SDL_WINDOW_FULLSCREEN_DESKTOP);
+        //Setup window
+        SDL_Window* window = SDL_CreateWindow(nullptr, SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 0, 0, SDL_WINDOW_FULLSCREEN_DESKTOP);
 	
 	//Setup renderer
-    SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_SOFTWARE);
+        SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_SOFTWARE);
 
 	//Make an image-surface and create texture
 	//SDL_Surface * image = IMG_Load("assets/image/image.jpg");
