@@ -1,4 +1,7 @@
 # switch_sdl_pong
+Cryptic shit entails
+you got this...
+
 Pong For The Nintendo Switch Using SDL C++ And libnx
 Download this repository 
 
