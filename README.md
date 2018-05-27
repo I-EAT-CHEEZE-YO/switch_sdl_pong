@@ -1,6 +1,6 @@
 # Pong for the Nintendo Switch Written in c++ and using SDL2
 
-A basic implementation of pong for the switch
+A basic implementation of pong for the switch (only tested by me and confirmed working on 5.0.2)
 
 ## Getting Started
 
