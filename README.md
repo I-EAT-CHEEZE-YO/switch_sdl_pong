@@ -1,7 +1,1 @@
-5-27-18
-
-added 2 player
-
-code still sucks (fix it)
-not many more comments //why not?
-added sound effect for scoring, so people dont think theyre getting ripped off
+Pong for the nintendo switch written in c++ and using SDL2
