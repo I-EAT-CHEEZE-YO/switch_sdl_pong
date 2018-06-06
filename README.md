@@ -16,9 +16,6 @@ From Msys2 Terminal :
 cd [PATH TO SOURCE FOLDER] E.g. cd ~/Desktop/switch_sdl_pong-master
 ```
 ```
-mkdir romfs
-```
-```
 make
 ```
 
@@ -27,9 +24,6 @@ rename this file switch_sdl_pong.nro
 
 ```
 Insert your Switch SD Card and make a new folder inside of the switch folder called switch_sdl_pong
-```
-```
-copy the assets folder from the source folder to the sd card folder it should look like this SD:/switch/switch_sdl_pong/assets
 ```
 ```
 copy the switch_sdl_pong.nro to the same directory it shoul look like this SD:/switch/switch_sdl_pong/switch_sdl_pong.nro
