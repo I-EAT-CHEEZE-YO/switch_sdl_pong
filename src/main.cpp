@@ -1,6 +1,6 @@
 /*
 Pong for the Nintendo Switch Written in c++ Using libnx and SDL2 
-Written By I_EAT_CHEEZE_YO a.k.a. Todd Forester
+Written By I_EAT_CHEEZE_YO a.k.a. Todd Forester a.k.a. CHEEZE a.k.a. CHEEZUS
 5-2018
 */
 
@@ -66,7 +66,7 @@ const int number_9 = 24;
 const int space = 25;
 
 
-//different states
+//states
 const int SPLASH = 0;
 const int MAIN_MENU = 1;
 const int GAME_SINGLE_PLAYER = 2;
@@ -283,7 +283,8 @@ int main(int argc, char **argv) {
 		
 	}
 }
-
+	
+	romfsInit();
 	SDL_Init(SDL_INIT_EVERYTHING); //init sdl
 	IMG_Init(IMG_INIT_JPG); //init image lib
 	
@@ -329,33 +330,33 @@ int main(int argc, char **argv) {
     SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_SOFTWARE);
 	
 	//Load Images
-	SDL_Surface* paddleImage = IMG_Load("assets/image/paddle.png");
-	SDL_Surface* ballImage = IMG_Load("assets/image/ball.png");
+	SDL_Surface* paddleImage = IMG_Load("romfs:/res/image/paddle.png");
+	SDL_Surface* ballImage = IMG_Load("romfs:/res/image/ball.png");
 	
-	SDL_Surface* font16X16 = IMG_Load("assets/font/font_16x16.png");
+	SDL_Surface* font16X16 = IMG_Load("romfs:/res/font/font_16x16.png");
 	SDL_Texture* fontTexture = SDL_CreateTextureFromSurface(renderer, font16X16);
 	
-	SDL_Surface* p1winsImage = IMG_Load("assets/image/player_1_wins.png");
-	SDL_Surface* p2winsImage = IMG_Load("assets/image/player_2_wins.png");
+	SDL_Surface* p1winsImage = IMG_Load("romfs:/res/image/player_1_wins.png");
+	SDL_Surface* p2winsImage = IMG_Load("romfs:/res/image/player_2_wins.png");
 	
 	SDL_Texture* p1winsTexture = SDL_CreateTextureFromSurface(renderer, p1winsImage);
 	SDL_Texture* p2winsTexture = SDL_CreateTextureFromSurface(renderer, p2winsImage);
 	
-	SDL_Surface* splashImage = IMG_Load("assets/image/splash.png");
+	SDL_Surface* splashImage = IMG_Load("romfs:/res/image/splash.png");
 	SDL_Texture* splashTexture = SDL_CreateTextureFromSurface(renderer, splashImage);
 	
-	SDL_Surface* mainMenuImage_01 = IMG_Load("assets/image/main_menu_one_player.jpg");
-	SDL_Surface* mainMenuImage_02 = IMG_Load("assets/image/main_menu_two_player.jpg");
-	SDL_Surface* mainMenuImage_03 = IMG_Load("assets/image/main_menu_quit.jpg");
+	SDL_Surface* mainMenuImage_01 = IMG_Load("romfs:/res/image/main_menu_one_player.jpg");
+	SDL_Surface* mainMenuImage_02 = IMG_Load("romfs:/res/image/main_menu_two_player.jpg");
+	SDL_Surface* mainMenuImage_03 = IMG_Load("romfs:/res/image/main_menu_quit.jpg");
 	
-	SDL_Surface* pausedImage = IMG_Load("assets/image/paused.png");
+	SDL_Surface* pausedImage = IMG_Load("romfs:/res/image/paused.png");
 	SDL_Texture* pausedTexture = SDL_CreateTextureFromSurface(renderer, pausedImage);
 	
 	SDL_Texture* mainMenuTexture_01 = SDL_CreateTextureFromSurface(renderer, mainMenuImage_01);
 	SDL_Texture* mainMenuTexture_02 = SDL_CreateTextureFromSurface(renderer, mainMenuImage_02);
 	SDL_Texture* mainMenuTexture_03 = SDL_CreateTextureFromSurface(renderer, mainMenuImage_03);
 	
-	SDL_Surface* detachImage = IMG_Load("assets/image/detach_joycons.png");
+	SDL_Surface* detachImage = IMG_Load("romfs:/res/image/detach_joycons.png");
 	SDL_Texture* detachTexture = SDL_CreateTextureFromSurface(renderer, detachImage);
 	
 	//convert Images to Textures
@@ -364,8 +365,8 @@ int main(int argc, char **argv) {
 	
 	SDL_Texture* mainMenuTextures[3] = {mainMenuTexture_01, mainMenuTexture_02, mainMenuTexture_03};
 	
-	pong = Mix_LoadWAV("assets/audio/pong.wav");
-	score = Mix_LoadWAV("assets/audio/score.wav");
+	pong = Mix_LoadWAV("romfs:/res/audio/pong.wav");
+	score = Mix_LoadWAV("romfs:/res/audio/score.wav");
 	
 	while(appletMainLoop() && !quit) { //main game loop
 		
