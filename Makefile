@@ -36,11 +36,11 @@ DATA		  := dat
 INCLUDES	  := include
 EXEFS_SRC	  := exefs_src
 ROMFS         := romfs
-APP_VERSION   := 0.0
+APP_VERSION   := 1.0
 ICON          := icon.jpg
 
 APP_TITLE     := Switch_SDL_Pong
-APP_AUTHOR    := CHEEZE
+APP_AUTHOR    := I_EAT_CHEEZE_YO
 
 
 #---------------------------------------------------------------------------------
